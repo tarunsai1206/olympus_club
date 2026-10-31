@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | High-End Luxury Fitness & Wellness</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">AURA<span>.</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">Philosophy</a>
+                <a href="#services" class="nav-link">Amenities</a>
+                <a href="#memberships" class="nav-link">Membership</a>
+                <a href="#calculator" class="nav-link">Metrics</a>
+                <a href="#contact" class="btn btn-outline">Private Tour</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Elite Wellness Sanctuary</span>
+            <h1 class="hero-title">Redefining Human Performance</h1>
+            <p class="hero-subtext">Experience bespoke training, state-of-the-art biomechanics, and personalized recovery protocols in an unmatched architectural atmosphere.</p>
+            <div class="hero-cta">
+                <a href="#memberships" class="btn btn-gold">Apply For Membership</a>
+                <a href="#about" class="btn btn-text">Explore Facility &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container grid grid-2">
+            <div class="about-text">
+                <h2 class="section-title">Where Aesthetics Meet Uncompromised Athleticism</h2>
+                <p>At AURA, we transcend traditional fitness. Designed for executives, athletes, and connoisseurs of wellness, our sanctuary integrates biophilic architecture, medical-grade diagnostics, and world-class personal instruction.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>1:1</h3>
+                        <p>Trainer Ratio Guarantee</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24k</h3>
+                        <p>Sq Ft Private Space</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Filtered Air & Oxygenated Pools</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000" alt="Luxury Gym Interior" class="glass-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Amenities Section -->
+    <section id="services" class="section services-section bg-darker">
+        <div class="container">
+            <div class="section-header center">
+                <h2 class="section-title">Exclusive Amenities</h2>
+                <p class="section-subtitle">Engineered to elevate your physical capabilities and accelerate recovery.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card glass-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Precision Training Studio</h3>
+                    <p>Custom Technogym Artis & Eleiko biomechanical resistance equipment configured to your biometric profile.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="card-icon">❄️</div>
+                    <h3>Cryo & Thermal Suite</h3>
+                    <p>Contrast therapy featuring full-spectrum infrared saunas, -110°C cryotherapy chambers, and magnesium plunge pools.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="card-icon">🧪</div>
+                    <h3>Biometric Lounge</h3>
+                    <p>VO2 Max testing, Dexa body composition scans, and personalized IV nutrition therapy administered by specialists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive BMI / Metrics Section -->
+    <section id="calculator" class="section calc-section">
+        <div class="container grid grid-2 align-center">
+            <div>
+                <h2 class="section-title">Biometric Baseline Assessment</h2>
+                <p>Track your core Body Mass Index metric below to initiate your customized physiological roadmap with our performance team.</p>
+            </div>
+            <div class="glass-card calc-card">
+                <h3>BMI Calculator</h3>
+                <form id="bmiForm">
+                    <div class="input-group">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" placeholder="e.g. 180" required min="100" max="250">
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="e.g. 78" required min="30" max="300">
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-full">Calculate Biometrics</button>
+                </form>
+                <div id="bmiResult" class="bmi-result hidden">
+                    <div class="bmi-value" id="bmiValue">0.0</div>
+                    <div class="bmi-category" id="bmiCategory">--</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memberships Section -->
+    <section id="memberships" class="section bg-darker">
+        <div class="container">
+            <div class="section-header center">
+                <h2 class="section-title">Membership Tiers</h2>
+                <p class="section-subtitle">Strictly limited membership caps ensure privacy and zero wait times.</p>
+            </div>
+            <div class="grid grid-3">
+                <!-- Tier 1 -->
+                <div class="card glass-card price-card">
+                    <h3>Executive</h3>
+                    <div class="price">$350 <span>/ mo</span></div>
+                    <ul class="price-features">
+                        <li>✓ Unlimited Facility Access</li>
+                        <li>✓ Thermal Suite & Sauna</li>
+                        <li>✓ Locker & Laundry Service</li>
+                        <li>✓ Bi-monthly Biometric Scan</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-full">Inquire Tier</a>
+                </div>
+                <!-- Tier 2 (Featured) -->
+                <div class="card glass-card price-card featured">
+                    <div class="featured-tag">Most Popular</div>
+                    <h3>Black Card</h3>
+                    <div class="price">$650 <span>/ mo</span></div>
+                    <ul class="price-features">
+                        <li>✓ All Executive Benefits</li>
+                        <li>✓ 4x Monthly Personal Coaching</li>
+                        <li>✓ Unlimited Cryotherapy</li>
+                        <li>✓ Private Valet & Guest Passes</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gold btn-full">Apply Tier</a>
+                </div>
+                <!-- Tier 3 -->
+                <div class="card glass-card price-card">
+                    <h3>Founders Circle</h3>
+                    <div class="price">$1,200 <span>/ mo</span></div>
+                    <ul class="price-features">
+                        <li>✓ 24/7 Priority VIP Access</li>
+                        <li>✓ Dedicated 1:1 Head Coach</li>
+                        <li>✓ Custom IV Therapy Protocols</li>
+                        <li>✓ Global Partner Sanctuary Access</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-full">Inquire Tier</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid grid-2">
+            <div>
+                <a href="#" class="brand-logo">AURA<span>.</span></a>
+                <p class="footer-desc">The global benchmark for luxury athletic performance and high-altitude recovery.</p>
+            </div>
+            <div class="footer-bottom-text">
+                <p>&copy; 2026 AURA Sanctuary Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ES6 JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Navbar Scroll Effect (Glassmorphism intensify)
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // BMI Calculator Logic
+            const bmiForm = document.getElementById('bmiForm');
+            const bmiResult = document.getElementById('bmiResult');
+            const bmiValue = document.getElementById('bmiValue');
+            const bmiCategory = document.getElementById('bmiCategory');
+
+            bmiForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const height = parseFloat(document.getElementById('height').value) / 100;
+                const weight = parseFloat(document.getElementById('weight').value);
+
+                if (height > 0 && weight > 0) {
+                    const bmi = (weight / (height * height)).toFixed(1);
+                    bmiValue.textContent = bmi;
+                    
+                    let category = '';
+                    let color = '';
+
+                    if (bmi < 18.5) {
+                        category = 'Underweight Baseline';
+                        color = '#e6c875';
+                    } else if (bmi >= 18.5 && bmi <= 24.9) {
+                        category = 'Optimal Athletic Composition';
+                        color = '#4ade80';
+                    } else if (bmi >= 25 && bmi <= 29.9) {
+                        category = 'Slight Muscle/Mass Elevation';
+                        color = '#facc15';
+                    } else {
+                        category = 'High Physical Mass Profile';
+                        color = '#f87171';
+                    }
+
+                    bmiCategory.textContent = category;
+                    bmiCategory.style.color = color;
+                    bmiResult.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
